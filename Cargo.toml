@@ -1,0 +1,23 @@
+[package]
+name = "rackety"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sciter-rs = "0.5.58"
+device_query = "1.1.1"
+soloud = "1"
+rand = "0.8"
+winreg = "0.8"
+
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1"
+
+[package.metadata.winres]
+OriginalFilename = "rackety.exe"
+LegalCopyright = "Copyright © Girkov Arpa 2022"
+FileDescription = "Rackety: Sound FX for typists!"
+ProductName = "Rackety"
+ProductVersion = "0.1.0"

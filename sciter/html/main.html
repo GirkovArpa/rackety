@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html window-icon="this://app/png/32x32.png" window-frame="transparent" window-resizable="false" window-width="500" window-height="400">
+
+  <head>
+    <title>Rackety: Sound FX for typists!</title>
+    <link href="this://app/css/main.css" rel="stylesheet">
+    <script src="this://app/js/main.js" type="module"></script>
+  </head>
+
+  <body>
+    <window-header>
+      <window-caption role="window-caption"><a href="https://girkovarpa.itch.io/rackety?ref=rackety">v0.1.0 FEEDBACK</a>
+      </window-caption>
+      <window-buttons>
+        <window-button role="window-minimize"></window-button>
+      </window-buttons>
+    </window-header>
+    <div #contents>
+      <div #title>RACKETY</div>
+      <div #volume-container>
+        <div #volume-label>VOLUME: 50%</div>
+        <input #volume-slider type="hslider" value="50" min="0" max="100" step="10" />
+        <div #volume-ticks>
+          <div .tick></div>
+          <div .tick></div>
+          <div .tick></div>
+          <div .tick></div>
+          <div .tick></div>
+          <div .tick></div>
+          <div .tick></div>
+          <div .tick></div>
+          <div .tick></div>
+          <div .tick></div>
+          <div .tick></div>
+        </div>
+      </div>
+      <div #dropdown-container>
+        <select>
+          <option>TYPEWRITER</option>
+          <option disabled>More coming soon ...</option>
+        </select>
+      </div>
+      <textarea rows="3" cols="36" novalue="Type here to test."></textarea>
+      <checkbox #start-at-login>START RACKETY AT LOGIN</checkbox>
+      <div #footer>
+        <button #pause>PAUSE</button>
+        <button #about>ABOUT</button>
+        <button #quit>QUIT</button>
+      </div>
+    </div>
+    <include media="sciter" src="tray-menu.html" />
+  </body>
+
+</html>
